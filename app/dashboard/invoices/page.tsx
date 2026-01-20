@@ -8,10 +8,10 @@ import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
 
 interface PageProps {
-  searchParams: {
+  searchParams: Promise<{
     query?: string;
     page?: string;
-  };
+  }>;
 }
  
 export default async function Page(props: PageProps) {
